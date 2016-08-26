@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF24D5811D6FD84500F990A2 /* LYCameraNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = AF24D5801D6FD84500F990A2 /* LYCameraNotification.m */; };
+		AF76887C1D6ECFBB00B76B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76887B1D6ECFBB00B76B23 /* main.m */; };
+		AF76887F1D6ECFBB00B76B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76887E1D6ECFBB00B76B23 /* AppDelegate.m */; };
+		AF7688821D6ECFBB00B76B23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7688811D6ECFBB00B76B23 /* ViewController.m */; };
+		AF7688851D6ECFBB00B76B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7688831D6ECFBB00B76B23 /* Main.storyboard */; };
+		AF7688871D6ECFBB00B76B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7688861D6ECFBB00B76B23 /* Assets.xcassets */; };
+		AF76888A1D6ECFBB00B76B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7688881D6ECFBB00B76B23 /* LaunchScreen.storyboard */; };
+		AF7688951D6ECFBB00B76B23 /* LYFilterCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7688941D6ECFBB00B76B23 /* LYFilterCameraTests.m */; };
+		AF7688A01D6ECFBB00B76B23 /* LYFilterCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76889F1D6ECFBB00B76B23 /* LYFilterCameraUITests.m */; };
+		AFECA55D1D6ED1F800648E1A /* LYPhotoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA55C1D6ED1F800648E1A /* LYPhotoFilter.m */; };
+		AFECA5601D6ED4B100648E1A /* LYPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA55F1D6ED4B100648E1A /* LYPreviewView.m */; };
+		AFECA5631D6ED91800648E1A /* LYContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA5621D6ED91800648E1A /* LYContextManager.m */; };
+		AFECA5661D6EDAF400648E1A /* LYCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA5651D6EDAF400648E1A /* LYCameraManager.m */; };
+		AFECA5691D6EEDA200648E1A /* LYCameraCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA5681D6EEDA200648E1A /* LYCameraCollectionView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF7688911D6ECFBB00B76B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF76886F1D6ECFBB00B76B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF7688761D6ECFBB00B76B23;
+			remoteInfo = LYFilterCamera;
+		};
+		AF76889C1D6ECFBB00B76B23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF76886F1D6ECFBB00B76B23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF7688761D6ECFBB00B76B23;
+			remoteInfo = LYFilterCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF24D57F1D6FD84500F990A2 /* LYCameraNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCameraNotification.h; sourceTree = "<group>"; };
+		AF24D5801D6FD84500F990A2 /* LYCameraNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCameraNotification.m; sourceTree = "<group>"; };
+		AF7688771D6ECFBB00B76B23 /* LYFilterCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYFilterCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF76887B1D6ECFBB00B76B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AF76887D1D6ECFBB00B76B23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AF76887E1D6ECFBB00B76B23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AF7688801D6ECFBB00B76B23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF7688811D6ECFBB00B76B23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF7688841D6ECFBB00B76B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF7688861D6ECFBB00B76B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF7688891D6ECFBB00B76B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF76888B1D6ECFBB00B76B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7688901D6ECFBB00B76B23 /* LYFilterCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFilterCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7688941D6ECFBB00B76B23 /* LYFilterCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFilterCameraTests.m; sourceTree = "<group>"; };
+		AF7688961D6ECFBB00B76B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF76889B1D6ECFBB00B76B23 /* LYFilterCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFilterCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF76889F1D6ECFBB00B76B23 /* LYFilterCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFilterCameraUITests.m; sourceTree = "<group>"; };
+		AF7688A11D6ECFBB00B76B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFECA55A1D6ED15D00648E1A /* LYImageTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYImageTransport.h; sourceTree = "<group>"; };
+		AFECA55B1D6ED1F800648E1A /* LYPhotoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPhotoFilter.h; sourceTree = "<group>"; };
+		AFECA55C1D6ED1F800648E1A /* LYPhotoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPhotoFilter.m; sourceTree = "<group>"; };
+		AFECA55E1D6ED4B100648E1A /* LYPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPreviewView.h; sourceTree = "<group>"; };
+		AFECA55F1D6ED4B100648E1A /* LYPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPreviewView.m; sourceTree = "<group>"; };
+		AFECA5611D6ED91800648E1A /* LYContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYContextManager.h; sourceTree = "<group>"; };
+		AFECA5621D6ED91800648E1A /* LYContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYContextManager.m; sourceTree = "<group>"; };
+		AFECA5641D6EDAF300648E1A /* LYCameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCameraManager.h; sourceTree = "<group>"; };
+		AFECA5651D6EDAF400648E1A /* LYCameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCameraManager.m; sourceTree = "<group>"; };
+		AFECA5671D6EEDA200648E1A /* LYCameraCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCameraCollectionView.h; sourceTree = "<group>"; };
+		AFECA5681D6EEDA200648E1A /* LYCameraCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCameraCollectionView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF7688741D6ECFBB00B76B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF76888D1D6ECFBB00B76B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7688981D6ECFBB00B76B23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF76886E1D6ECFBB00B76B23 = {
+			isa = PBXGroup;
+			children = (
+				AF7688791D6ECFBB00B76B23 /* LYFilterCamera */,
+				AF7688931D6ECFBB00B76B23 /* LYFilterCameraTests */,
+				AF76889E1D6ECFBB00B76B23 /* LYFilterCameraUITests */,
+				AF7688781D6ECFBB00B76B23 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF7688781D6ECFBB00B76B23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF7688771D6ECFBB00B76B23 /* LYFilterCamera.app */,
+				AF7688901D6ECFBB00B76B23 /* LYFilterCameraTests.xctest */,
+				AF76889B1D6ECFBB00B76B23 /* LYFilterCameraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF7688791D6ECFBB00B76B23 /* LYFilterCamera */ = {
+			isa = PBXGroup;
+			children = (
+				AFECA5581D6ED03B00648E1A /* Common */,
+				AF76887D1D6ECFBB00B76B23 /* AppDelegate.h */,
+				AF76887E1D6ECFBB00B76B23 /* AppDelegate.m */,
+				AF7688801D6ECFBB00B76B23 /* ViewController.h */,
+				AF7688811D6ECFBB00B76B23 /* ViewController.m */,
+				AF7688831D6ECFBB00B76B23 /* Main.storyboard */,
+				AF7688861D6ECFBB00B76B23 /* Assets.xcassets */,
+				AF7688881D6ECFBB00B76B23 /* LaunchScreen.storyboard */,
+				AF76888B1D6ECFBB00B76B23 /* Info.plist */,
+				AF76887A1D6ECFBB00B76B23 /* Supporting Files */,
+			);
+			path = LYFilterCamera;
+			sourceTree = "<group>";
+		};
+		AF76887A1D6ECFBB00B76B23 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF76887B1D6ECFBB00B76B23 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF7688931D6ECFBB00B76B23 /* LYFilterCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF7688941D6ECFBB00B76B23 /* LYFilterCameraTests.m */,
+				AF7688961D6ECFBB00B76B23 /* Info.plist */,
+			);
+			path = LYFilterCameraTests;
+			sourceTree = "<group>";
+		};
+		AF76889E1D6ECFBB00B76B23 /* LYFilterCameraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF76889F1D6ECFBB00B76B23 /* LYFilterCameraUITests.m */,
+				AF7688A11D6ECFBB00B76B23 /* Info.plist */,
+			);
+			path = LYFilterCameraUITests;
+			sourceTree = "<group>";
+		};
+		AFECA5581D6ED03B00648E1A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AFECA55A1D6ED15D00648E1A /* LYImageTransport.h */,
+				AF24D57F1D6FD84500F990A2 /* LYCameraNotification.h */,
+				AF24D5801D6FD84500F990A2 /* LYCameraNotification.m */,
+				AFECA55B1D6ED1F800648E1A /* LYPhotoFilter.h */,
+				AFECA55C1D6ED1F800648E1A /* LYPhotoFilter.m */,
+				AFECA55E1D6ED4B100648E1A /* LYPreviewView.h */,
+				AFECA55F1D6ED4B100648E1A /* LYPreviewView.m */,
+				AFECA5611D6ED91800648E1A /* LYContextManager.h */,
+				AFECA5621D6ED91800648E1A /* LYContextManager.m */,
+				AFECA5641D6EDAF300648E1A /* LYCameraManager.h */,
+				AFECA5651D6EDAF400648E1A /* LYCameraManager.m */,
+				AFECA5671D6EEDA200648E1A /* LYCameraCollectionView.h */,
+				AFECA5681D6EEDA200648E1A /* LYCameraCollectionView.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF7688761D6ECFBB00B76B23 /* LYFilterCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7688A41D6ECFBB00B76B23 /* Build configuration list for PBXNativeTarget "LYFilterCamera" */;
+			buildPhases = (
+				AF7688731D6ECFBB00B76B23 /* Sources */,
+				AF7688741D6ECFBB00B76B23 /* Frameworks */,
+				AF7688751D6ECFBB00B76B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYFilterCamera;
+			productName = LYFilterCamera;
+			productReference = AF7688771D6ECFBB00B76B23 /* LYFilterCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF76888F1D6ECFBB00B76B23 /* LYFilterCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7688A71D6ECFBB00B76B23 /* Build configuration list for PBXNativeTarget "LYFilterCameraTests" */;
+			buildPhases = (
+				AF76888C1D6ECFBB00B76B23 /* Sources */,
+				AF76888D1D6ECFBB00B76B23 /* Frameworks */,
+				AF76888E1D6ECFBB00B76B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF7688921D6ECFBB00B76B23 /* PBXTargetDependency */,
+			);
+			name = LYFilterCameraTests;
+			productName = LYFilterCameraTests;
+			productReference = AF7688901D6ECFBB00B76B23 /* LYFilterCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF76889A1D6ECFBB00B76B23 /* LYFilterCameraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7688AA1D6ECFBB00B76B23 /* Build configuration list for PBXNativeTarget "LYFilterCameraUITests" */;
+			buildPhases = (
+				AF7688971D6ECFBB00B76B23 /* Sources */,
+				AF7688981D6ECFBB00B76B23 /* Frameworks */,
+				AF7688991D6ECFBB00B76B23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF76889D1D6ECFBB00B76B23 /* PBXTargetDependency */,
+			);
+			name = LYFilterCameraUITests;
+			productName = LYFilterCameraUITests;
+			productReference = AF76889B1D6ECFBB00B76B23 /* LYFilterCameraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF76886F1D6ECFBB00B76B23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = kuner;
+				TargetAttributes = {
+					AF7688761D6ECFBB00B76B23 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					AF76888F1D6ECFBB00B76B23 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = AF7688761D6ECFBB00B76B23;
+					};
+					AF76889A1D6ECFBB00B76B23 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = AF7688761D6ECFBB00B76B23;
+					};
+				};
+			};
+			buildConfigurationList = AF7688721D6ECFBB00B76B23 /* Build configuration list for PBXProject "LYFilterCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF76886E1D6ECFBB00B76B23;
+			productRefGroup = AF7688781D6ECFBB00B76B23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF7688761D6ECFBB00B76B23 /* LYFilterCamera */,
+				AF76888F1D6ECFBB00B76B23 /* LYFilterCameraTests */,
+				AF76889A1D6ECFBB00B76B23 /* LYFilterCameraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF7688751D6ECFBB00B76B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF76888A1D6ECFBB00B76B23 /* LaunchScreen.storyboard in Resources */,
+				AF7688871D6ECFBB00B76B23 /* Assets.xcassets in Resources */,
+				AF7688851D6ECFBB00B76B23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF76888E1D6ECFBB00B76B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7688991D6ECFBB00B76B23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF7688731D6ECFBB00B76B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7688821D6ECFBB00B76B23 /* ViewController.m in Sources */,
+				AF76887F1D6ECFBB00B76B23 /* AppDelegate.m in Sources */,
+				AFECA5631D6ED91800648E1A /* LYContextManager.m in Sources */,
+				AFECA5661D6EDAF400648E1A /* LYCameraManager.m in Sources */,
+				AF76887C1D6ECFBB00B76B23 /* main.m in Sources */,
+				AF24D5811D6FD84500F990A2 /* LYCameraNotification.m in Sources */,
+				AFECA5601D6ED4B100648E1A /* LYPreviewView.m in Sources */,
+				AFECA5691D6EEDA200648E1A /* LYCameraCollectionView.m in Sources */,
+				AFECA55D1D6ED1F800648E1A /* LYPhotoFilter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF76888C1D6ECFBB00B76B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7688951D6ECFBB00B76B23 /* LYFilterCameraTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7688971D6ECFBB00B76B23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7688A01D6ECFBB00B76B23 /* LYFilterCameraUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF7688921D6ECFBB00B76B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF7688761D6ECFBB00B76B23 /* LYFilterCamera */;
+			targetProxy = AF7688911D6ECFBB00B76B23 /* PBXContainerItemProxy */;
+		};
+		AF76889D1D6ECFBB00B76B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF7688761D6ECFBB00B76B23 /* LYFilterCamera */;
+			targetProxy = AF76889C1D6ECFBB00B76B23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF7688831D6ECFBB00B76B23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF7688841D6ECFBB00B76B23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF7688881D6ECFBB00B76B23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF7688891D6ECFBB00B76B23 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF7688A21D6ECFBB00B76B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AF7688A31D6ECFBB00B76B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF7688A51D6ECFBB00B76B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LYFilterCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lgy.filterCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AF7688A61D6ECFBB00B76B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LYFilterCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lgy.filterCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AF7688A81D6ECFBB00B76B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LYFilterCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuner.LYFilterCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYFilterCamera.app/LYFilterCamera";
+			};
+			name = Debug;
+		};
+		AF7688A91D6ECFBB00B76B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LYFilterCameraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuner.LYFilterCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYFilterCamera.app/LYFilterCamera";
+			};
+			name = Release;
+		};
+		AF7688AB1D6ECFBB00B76B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LYFilterCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuner.LYFilterCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYFilterCamera;
+			};
+			name = Debug;
+		};
+		AF7688AC1D6ECFBB00B76B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LYFilterCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuner.LYFilterCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LYFilterCamera;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF7688721D6ECFBB00B76B23 /* Build configuration list for PBXProject "LYFilterCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7688A21D6ECFBB00B76B23 /* Debug */,
+				AF7688A31D6ECFBB00B76B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7688A41D6ECFBB00B76B23 /* Build configuration list for PBXNativeTarget "LYFilterCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7688A51D6ECFBB00B76B23 /* Debug */,
+				AF7688A61D6ECFBB00B76B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7688A71D6ECFBB00B76B23 /* Build configuration list for PBXNativeTarget "LYFilterCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7688A81D6ECFBB00B76B23 /* Debug */,
+				AF7688A91D6ECFBB00B76B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7688AA1D6ECFBB00B76B23 /* Build configuration list for PBXNativeTarget "LYFilterCameraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7688AB1D6ECFBB00B76B23 /* Debug */,
+				AF7688AC1D6ECFBB00B76B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF76886F1D6ECFBB00B76B23 /* Project object */;
+}
