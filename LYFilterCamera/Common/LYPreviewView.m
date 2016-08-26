@@ -31,6 +31,8 @@
         
         self.transform = CGAffineTransformMakeRotation(M_PI_2);
         
+        self.frame = frame;
+        
         [self bindDrawable];
         
         _drawableBounds = self.bounds;
@@ -40,18 +42,6 @@
     
     return self;
 }
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    [self bindDrawable];
-    
-    _drawableBounds = self.bounds;
-    _drawableBounds.size.width = self.drawableWidth;
-    _drawableBounds.size.height = self.drawableHeight;
-}
-
 
 #pragma mark - LYImageTransport
 

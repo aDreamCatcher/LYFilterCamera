@@ -33,7 +33,7 @@
 - (void)setupCaptureSesstion
 {
     _captureSession = [[AVCaptureSession alloc] init];
-    _captureSession.sessionPreset = AVCaptureSessionPresetHigh;
+    _captureSession.sessionPreset = AVCaptureSessionPresetLow;
     
     NSError *error;
     AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -101,14 +101,17 @@
     // 展示
     if (captureOutput == _videoDataOutput) {
         // 实时采样滤镜处理
-        CVPixelBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-        
-        CIImage *sourceImage = [CIImage imageWithCVImageBuffer:imageBuffer options:NULL];
-        
-        for (id obj in _imageTargets) {
+        @synchronized (self) {
+            CVPixelBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
             
-            [obj setImage:sourceImage];
+            CIImage *sourceImage = [CIImage imageWithCVImageBuffer:imageBuffer options:NULL];
+            
+            for (id obj in _imageTargets) {
+                
+                [obj setImage:sourceImage];
+            }
         }
+        
     }
     
 }

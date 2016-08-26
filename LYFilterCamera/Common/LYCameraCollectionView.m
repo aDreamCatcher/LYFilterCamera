@@ -39,22 +39,9 @@
         [self setupPreview];
         
         [self setupCameraManager];
-        
     }
     
     return self;
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    for (int i=0; i < _cameraNumber; i++) {
-        LYPreviewView *preview = _cameraMArray[i];
-        
-        preview.frame = [self rectByIndex:i];
-    }
-    
 }
 
 - (void)dealloc
@@ -70,7 +57,8 @@
     LYContextManager *contextManager = [LYContextManager shareManager];
     
     for (int i = 0; i < _cameraNumber; i++) {
-        LYPreviewView *previewView = [[LYPreviewView alloc] initWithFrame:self.bounds context:contextManager.eaglContext];
+        
+        LYPreviewView *previewView = [[LYPreviewView alloc] initWithFrame:[self rectByIndex:i] context:contextManager.eaglContext];
         previewView.filter = [self filterByIndex:i];
         previewView.coreImageContext = contextManager.ciContext;
         [self addSubview:previewView];
@@ -95,9 +83,9 @@
 
 - (CGRect)rectByIndex:(int)index
 {
-    CGFloat width = self.frame.size.width;
-    CGFloat height = self.frame.size.height;
-    
+    CGRect bounds = [UIScreen mainScreen].bounds;
+    CGFloat width = bounds.size.width;
+    CGFloat height = bounds.size.height;
     
     CGFloat space = 10;
     CGFloat itemWidth = (width-space*2)/3;
