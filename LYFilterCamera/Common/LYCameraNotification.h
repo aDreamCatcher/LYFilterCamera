@@ -9,4 +9,4 @@
 #import <UIKit/UIKit.h>
 
 // 设备获取到原始图片
-UIKIT_EXTERN NSString * const kLYCameraSourceImageNotification;
+UIKIT_EXTERN NSString *const kLYCameraSourceImageNotification;

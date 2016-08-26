@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong, readonly) dispatch_queue_t  captureQueue;
 @property (nonatomic, assign, readonly) BOOL              isRecorded;
-@property (nonatomic, strong)           NSArray<LYImageTransport>  *imageTargets;
+@property (nonatomic, weak) id<LYImageTransport>          delegate;
 
 - (void)setupCaptureSesstion;
 - (void)startCaptureSesstion;

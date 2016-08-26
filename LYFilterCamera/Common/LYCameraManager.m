@@ -33,7 +33,7 @@
 - (void)setupCaptureSesstion
 {
     _captureSession = [[AVCaptureSession alloc] init];
-    _captureSession.sessionPreset = AVCaptureSessionPresetLow;
+    _captureSession.sessionPreset = AVCaptureSessionPresetMedium;
     
     NSError *error;
     AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -106,19 +106,12 @@
             
             CIImage *sourceImage = [CIImage imageWithCVImageBuffer:imageBuffer options:NULL];
             
-            for (id obj in _imageTargets) {
-                
-                [obj setImage:sourceImage];
+            if ([_delegate respondsToSelector:@selector(setImage:)]) {
+                [_delegate setImage:sourceImage];
             }
         }
-        
     }
-    
 }
-
-
-
-
 
 - (void)dealloc
 {

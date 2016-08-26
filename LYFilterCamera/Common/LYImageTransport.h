@@ -11,5 +11,6 @@
 @protocol LYImageTransport <NSObject>
 
 - (void)setImage:(CIImage *)image;
+- (void)setDrawImageFrame:(CGRect)frame;
 
 @end

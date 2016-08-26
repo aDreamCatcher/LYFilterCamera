@@ -20,10 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor yellowColor];
-    
     _cameraView = [[LYCameraCollectionView alloc] init];
-    
+    _cameraView.frame = [UIScreen mainScreen].bounds;
     [self.view addSubview:_cameraView];
 }
 

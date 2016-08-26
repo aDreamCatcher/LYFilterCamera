@@ -43,6 +43,11 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [self deleteDrawable];
+}
+
 #pragma mark - LYImageTransport
 
 - (void)setImage:(CIImage *)sourceImage
@@ -67,6 +72,19 @@
     
 }
 
+- (void)setDrawImageFrame:(CGRect)frame
+{
+    self.frame = frame;
+    
+    [self bindDrawable];
+    
+    _drawableBounds = self.bounds;
+    _drawableBounds.size.width = self.drawableWidth;
+    _drawableBounds.size.height = self.drawableHeight;
+}
+
+#pragma mark - Utiity
+
 CGRect LYCenterCropImageRect(CGRect sourceRect , CGRect previewRect) {
     
     // 宽高比
@@ -90,8 +108,5 @@ CGRect LYCenterCropImageRect(CGRect sourceRect , CGRect previewRect) {
     }
     return drawRect;
 }
-
-
-
 
 @end
