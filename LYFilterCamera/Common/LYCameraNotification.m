@@ -9,4 +9,10 @@
 #import "LYCameraNotification.h"
 
 // 设备获取到原始图片
-NSString *const kCameraSourceImageNotification = @"kCameraSourceImageNotification";
+NSString * const kLYCameraSourceImageNotification = @"kCameraSourceImageNotification";
+
+NSString * const kLYCameraFilterDidChangeNotification = @"KLYCameraFilterDidChangeNotification";
+
+NSString * const kLYCameraWillWriteVideoNotification = @"KLYCameraWillWriteVideoNotification";
+
+NSString * const kLYCameraDidWriteVideoNotification = @"KLYCameraDidWriteVideoNotification";

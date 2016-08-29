@@ -1,0 +1,18 @@
+//
+//  PrefixHeader.pch
+//  LYFilterCamera
+//
+//  Created by kuner on 16/8/29.
+//  Copyright © 2016年 kuner. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "LYCameraNotification.h"
+
+
+#define LYWeakSelf(type) __weak typeof(type) weak##type = type;
+
+
+#endif /* PrefixHeader_pch */

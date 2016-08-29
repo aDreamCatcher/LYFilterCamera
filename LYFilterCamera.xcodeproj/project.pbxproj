@@ -16,6 +16,7 @@
 		AF76888A1D6ECFBB00B76B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7688881D6ECFBB00B76B23 /* LaunchScreen.storyboard */; };
 		AF7688951D6ECFBB00B76B23 /* LYFilterCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7688941D6ECFBB00B76B23 /* LYFilterCameraTests.m */; };
 		AF7688A01D6ECFBB00B76B23 /* LYFilterCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF76889F1D6ECFBB00B76B23 /* LYFilterCameraUITests.m */; };
+		AF97C4741D73D7B200B2AB76 /* LYMovieWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF97C4731D73D7B200B2AB76 /* LYMovieWriter.m */; };
 		AFECA55D1D6ED1F800648E1A /* LYPhotoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA55C1D6ED1F800648E1A /* LYPhotoFilter.m */; };
 		AFECA5601D6ED4B100648E1A /* LYPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA55F1D6ED4B100648E1A /* LYPreviewView.m */; };
 		AFECA5631D6ED91800648E1A /* LYContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECA5621D6ED91800648E1A /* LYContextManager.m */; };
@@ -59,6 +60,9 @@
 		AF76889B1D6ECFBB00B76B23 /* LYFilterCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYFilterCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF76889F1D6ECFBB00B76B23 /* LYFilterCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYFilterCameraUITests.m; sourceTree = "<group>"; };
 		AF7688A11D6ECFBB00B76B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF97C4721D73D7B200B2AB76 /* LYMovieWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMovieWriter.h; sourceTree = "<group>"; };
+		AF97C4731D73D7B200B2AB76 /* LYMovieWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMovieWriter.m; sourceTree = "<group>"; };
+		AF97C4751D73DEF200B2AB76 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AFECA55A1D6ED15D00648E1A /* LYImageTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYImageTransport.h; sourceTree = "<group>"; };
 		AFECA55B1D6ED1F800648E1A /* LYPhotoFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPhotoFilter.h; sourceTree = "<group>"; };
 		AFECA55C1D6ED1F800648E1A /* LYPhotoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPhotoFilter.m; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AF76887B1D6ECFBB00B76B23 /* main.m */,
+				AF97C4751D73DEF200B2AB76 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -174,6 +179,8 @@
 				AFECA5621D6ED91800648E1A /* LYContextManager.m */,
 				AFECA5641D6EDAF300648E1A /* LYCameraManager.h */,
 				AFECA5651D6EDAF400648E1A /* LYCameraManager.m */,
+				AF97C4721D73D7B200B2AB76 /* LYMovieWriter.h */,
+				AF97C4731D73D7B200B2AB76 /* LYMovieWriter.m */,
 				AFECA5671D6EEDA200648E1A /* LYCameraCollectionView.h */,
 				AFECA5681D6EEDA200648E1A /* LYCameraCollectionView.m */,
 			);
@@ -318,6 +325,7 @@
 				AF24D5811D6FD84500F990A2 /* LYCameraNotification.m in Sources */,
 				AFECA5601D6ED4B100648E1A /* LYPreviewView.m in Sources */,
 				AFECA5691D6EEDA200648E1A /* LYCameraCollectionView.m in Sources */,
+				AF97C4741D73D7B200B2AB76 /* LYMovieWriter.m in Sources */,
 				AFECA55D1D6ED1F800648E1A /* LYPhotoFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LYFilterCamera/PrefixHeader.pch;
 				INFOPLIST_FILE = LYFilterCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lgy.filterCamera;
@@ -470,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LYFilterCamera/PrefixHeader.pch;
 				INFOPLIST_FILE = LYFilterCamera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lgy.filterCamera;

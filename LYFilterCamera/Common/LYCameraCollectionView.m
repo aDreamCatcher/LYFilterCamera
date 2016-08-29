@@ -91,9 +91,23 @@
 
 - (void)previewTapAction:(id)sender
 {
-    UITapGestureRecognizer *tapGes = (UITapGestureRecognizer *)sender;
-    
-    [self previewAnimationBig:tapGes.view.tag];
+    if (_cameraMArray.count == 1) {
+        if (_cameraManager.isRecorded) {
+            [_cameraManager stopRecorded];
+        }
+        else
+        {
+            [_cameraManager startRecorded];
+        }
+    }
+    else
+    {
+        //
+        UITapGestureRecognizer *tapGes = (UITapGestureRecognizer *)sender;
+        [self previewAnimationBig:tapGes.view.tag];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:kLYCameraFilterDidChangeNotification object:((LYPreviewView *)tapGes.view).filter];
+    }
 }
 
 #pragma mark - LYImageTransport

@@ -8,12 +8,14 @@
 
 #import "LYCameraManager.h"
 #import <AVFoundation/AVFoundation.h>
+#import "LYMovieWriter.h"
 
-@interface LYCameraManager()<AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface LYCameraManager()<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureAudioDataOutputSampleBufferDelegate>
 
 @property (nonatomic, strong) AVCaptureSession  *captureSession;
 @property (nonatomic, strong) AVCaptureDeviceInput  *videoInput;
 @property (nonatomic, strong) AVCaptureVideoDataOutput  *videoDataOutput;
+@property (nonatomic, strong) LYMovieWriter             *movieWriter;
 
 @end
 
@@ -47,6 +49,17 @@
         }
     }
     
+    // audio input
+    AVCaptureDevice *audioDevide = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
+    AVCaptureDeviceInput *audioInput = [AVCaptureDeviceInput deviceInputWithDevice:audioDevide error:nil];
+    
+    if (audioInput) {
+        if ([_captureSession canAddInput:audioInput]) {
+            [_captureSession addInput:audioInput];
+        }
+    }
+    
+    
     // video data output
     _videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
     
@@ -61,6 +74,21 @@
     if ([_captureSession canAddOutput:_videoDataOutput]) {
         [_captureSession addOutput:_videoDataOutput];
     }
+    
+    // audio data output
+    AVCaptureAudioDataOutput *audioDataOutput = [[AVCaptureAudioDataOutput alloc] init];
+    [audioDataOutput setSampleBufferDelegate:self queue:_captureQueue];
+    
+    if ([_captureSession canAddOutput:audioDataOutput]) {
+        [_captureSession addOutput:audioDataOutput];
+    }
+    
+    // asset writer
+    // 将videoOutput 和 audioOutput的配置传送给assetWriter
+    NSDictionary *videoSettings = [_videoDataOutput recommendedVideoSettingsForAssetWriterWithOutputFileType:AVFileTypeQuickTimeMovie];
+    NSDictionary *audioSettings = [audioDataOutput recommendedAudioSettingsForAssetWriterWithOutputFileType:AVFileTypeQuickTimeMovie];
+    
+    _movieWriter = [[LYMovieWriter alloc] initWithVideoSettings:videoSettings audioSettings:audioSettings dispatchQueue:_captureQueue];
     
 }
 
@@ -85,11 +113,13 @@
 - (void)startRecorded
 {
     _isRecorded = YES;
+    [_movieWriter startWriting];
 }
 
 - (void)stopRecorded
 {
     _isRecorded = NO;
+    [_movieWriter stopWriting];
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate
@@ -97,6 +127,7 @@
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
     // 实时采样(保存录制视频)
+    [_movieWriter processSampleBuffer:sampleBuffer];
     
     // 展示
     if (captureOutput == _videoDataOutput) {
